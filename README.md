@@ -2,6 +2,14 @@
 
 The public pages served by GitHub Pages from this repository, at `https://imskylab.github.io/`.
 
+## Skylabs (site root)
+
+- Studio landing page: https://imskylab.github.io/ (`index.html`)
+
+Maintained here directly. It introduces Skylabs and links to each app's pages below; it uses
+`vedic-mitra/logo.png` and `legal-mitra/icon.png` (the Legal Mitra launcher icon, 512 px, from
+`docs/brand/` in the private repository). It loads nothing from third parties and has no analytics.
+
 ## Vedic Mitra
 
 - Landing page: https://imskylab.github.io/vedic-mitra/
@@ -21,8 +29,6 @@ repository therefore keeps serving redirects rather than being deleted.
 Master copy: `docs/PRIVACY.md` in the private `imskylab/legal-mitra` repository;
 `legal-mitra/privacy/index.html` here is its HTML rendering. Change both together, with a new
 effective date. `legal-mitra/index.html` (the landing page) is maintained here directly.
-
-There is no page at the site root; `https://imskylab.github.io/` returns 404 by design.
 
 ## Where the source of these pages lives
 

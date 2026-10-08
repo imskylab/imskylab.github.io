@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<!--
+  Copyright (c) 2026 Jayvardhan Potabatti. All rights reserved.
+  The Skylabs studio landing page, published at https://imskylab.github.io/ from the public repository
+  imskylab/imskylab.github.io. Hand-written; no build step, no third-party requests, no analytics.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skylabs — Professional web and mobile apps</title>
+  <meta name="description" content="Skylabs designs and builds professional web and mobile apps: native Android, cross-platform Flutter, and the web. Makers of Vedic Mitra and Legal Mitra. Accurate, private by design, built to last." />
+  <meta name="author" content="Jayvardhan Potabatti" />
+  <meta name="theme-color" content="#0A1628" />
+  <link rel="canonical" href="https://imskylab.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Skylabs — Professional web and mobile apps" />
+  <meta property="og:description" content="Native Android, Flutter and web apps, engineered for accuracy and privacy. Makers of Vedic Mitra and Legal Mitra." />
+  <meta property="og:url" content="https://imskylab.github.io/" />
+  <meta property="og:site_name" content="Skylabs" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A1628'/%3E%3Cpath d='M14 44 L32 14 L50 44' fill='none' stroke='%237DD3FC' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='44' r='5' fill='%23F5B942'/%3E%3C/svg%3E" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Skylabs",
+    "url": "https://imskylab.github.io/",
+    "email": "skylabs.in@gmail.com",
+    "founder": { "@type": "Person", "name": "Jayvardhan Potabatti" },
+    "sameAs": ["https://github.com/imskylab", "https://www.linkedin.com/in/imskylab/"],
+    "description": "Skylabs designs and builds professional web and mobile apps."
+  }
+  </script>
+  <style>
+    :root {
+      --night: #0A1628;
+      --night-2: #0F2140;
+      --sky: #7DD3FC;
+      --sky-deep: #0284C7;
+      --sun: #F5B942;
+      --ink: #0F1B2D;
+      --paper: #F6F8FB;
+      --card: #FFFFFF;
+      --line: #DDE4EE;
+      --muted: #4B5B70;
+      --link: #0369A1;
+      --chip: #EAF4FB;
+      --shadow: 0 1px 2px rgba(15,27,45,.06), 0 8px 24px rgba(15,27,45,.06);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --ink: #E6EDF5;
+        --paper: #08111F;
+        --card: #0F1C30;
+        --line: #1F3048;
+        --muted: #9FB0C6;
+        --link: #7DD3FC;
+        --chip: #12263F;
+        --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Helvetica, Arial, sans-serif;
+      color: var(--ink); background: var(--paper); line-height: 1.6; overflow-x: hidden;
+    }
+    a { color: var(--link); }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; border-radius: 6px; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+    /* Nav */
+    .nav { position: absolute; inset: 0 0 auto 0; z-index: 2; }
+    .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .brand { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-weight: 700; letter-spacing: .02em; font-size: 1.15rem; }
+    .brand svg { width: 30px; height: 30px; }
+    .nav ul { display: flex; gap: 22px; list-style: none; }
+    .nav ul a { color: #C9D6E6; text-decoration: none; font-size: .95rem; }
+    .nav ul a:hover { color: #fff; }
+    @media (max-width: 640px) { .nav ul li:not(:last-child) { display: none; } }
+
+    /* Hero */
+    .hero {
+      position: relative; color: #fff; overflow: hidden;
+      background:
+        radial-gradient(1200px 500px at 85% -10%, rgba(125,211,252,.22), transparent 60%),
+        radial-gradient(800px 400px at -10% 110%, rgba(245,185,66,.14), transparent 60%),
+        linear-gradient(180deg, var(--night) 0%, var(--night-2) 100%);
+      padding: 140px 0 96px;
+    }
+    .stars { position: absolute; inset: 0; pointer-events: none; opacity: .55;
+      background-image:
+        radial-gradient(1px 1px at 12% 22%, #fff 50%, transparent 51%),
+        radial-gradient(1px 1px at 28% 68%, #fff 50%, transparent 51%),
+        radial-gradient(1.5px 1.5px at 44% 30%, #fff 50%, transparent 51%),
+        radial-gradient(1px 1px at 63% 78%, #fff 50%, transparent 51%),
+        radial-gradient(1.5px 1.5px at 76% 16%, #fff 50%, transparent 51%),
+        radial-gradient(1px 1px at 90% 54%, #fff 50%, transparent 51%),
+        radial-gradient(1px 1px at 6% 86%, #fff 50%, transparent 51%),
+        radial-gradient(1px 1px at 53% 52%, #fff 50%, transparent 51%);
+    }
+    .hero .wrap { position: relative; }
+    .eyebrow { display: inline-block; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--sky);
+      border: 1px solid rgba(125,211,252,.35); padding: 4px 12px; border-radius: 999px; margin-bottom: 22px; }
+    .hero h1 { font-size: clamp(2.2rem, 6.4vw, 3.9rem); line-height: 1.08; letter-spacing: -.02em; max-width: 820px; }
+    .hero h1 em { font-style: normal; background: linear-gradient(90deg, var(--sky), #BAE6FD 50%, var(--sun));
+      -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero .lede { max-width: 640px; margin-top: 22px; font-size: 1.15rem; color: #C9D6E6; }
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 24px; border-radius: 999px; font-weight: 600;
+      text-decoration: none; font-size: 1rem; transition: transform .15s ease, background .15s ease; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--sky); color: var(--night); }
+    .btn-primary:hover { background: #BAE6FD; }
+    .btn-ghost { color: #fff; border: 1px solid rgba(255,255,255,.28); }
+    .btn-ghost:hover { background: rgba(255,255,255,.08); }
+    .proof { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 54px; color: #9FB4CC; font-size: .92rem; }
+    .proof b { color: #fff; font-weight: 600; }
+
+    /* Sections */
+    section { padding: 88px 0; }
+    section + section { border-top: 1px solid var(--line); }
+    .kicker { color: var(--sky-deep); font-weight: 700; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .kicker { color: var(--sky); } }
+    h2 { font-size: clamp(1.7rem, 3.6vw, 2.3rem); line-height: 1.2; letter-spacing: -.01em; margin: 8px 0 12px; }
+    .intro { color: var(--muted); max-width: 680px; font-size: 1.05rem; margin-bottom: 40px; }
+
+    .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; box-shadow: var(--shadow); }
+    .card h3 { font-size: 1.1rem; margin: 14px 0 6px; }
+    .card p { color: var(--muted); font-size: .96rem; }
+    .ico { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: var(--chip); color: var(--sky-deep); }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .ico { color: var(--sky); } }
+    .ico svg { width: 24px; height: 24px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+    .tags span { font-size: .78rem; background: var(--chip); color: var(--muted); padding: 3px 10px; border-radius: 999px; }
+
+    /* Products */
+    .products { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .product { display: flex; flex-direction: column; border-radius: 20px; overflow: hidden; border: 1px solid var(--line); background: var(--card); box-shadow: var(--shadow); }
+    .product .top { padding: 28px; color: #fff; display: flex; gap: 18px; align-items: center; }
+    .product.vm .top { background: linear-gradient(135deg, #5E1B22, #8A2E2A 60%, #B5652B); }
+    .product.lm .top { background: linear-gradient(135deg, #07151f, #0B1F33 55%, #2F6F73); }
+    .product img { width: 72px; height: 72px; border-radius: 18px; background: #fff; flex: none; object-fit: cover; box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+    .product .top h3 { font-size: 1.4rem; line-height: 1.2; }
+    .product .top p { opacity: .85; font-size: .95rem; }
+    .product .body { padding: 24px 28px 28px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+    .product .body > p { color: var(--muted); }
+    .product ul { list-style: none; display: grid; gap: 8px; }
+    .product li { position: relative; padding-left: 24px; font-size: .95rem; }
+    .product li::before { content: ""; position: absolute; left: 4px; top: .58em; width: 8px; height: 8px; border-radius: 50%; background: var(--sun); }
+    .product .links { margin-top: auto; display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; padding-top: 6px; }
+    .product .links a { font-weight: 600; }
+    .status { font-size: .8rem; font-weight: 600; color: var(--muted); border: 1px solid var(--line); padding: 3px 10px; border-radius: 999px; }
+
+    /* Process */
+    .steps { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); counter-reset: step; }
+    .step { position: relative; padding: 24px; border-radius: 16px; border: 1px solid var(--line); background: var(--card); }
+    .step::before { counter-increment: step; content: "0" counter(step); font-weight: 800; font-size: 1.5rem; color: var(--sky-deep); opacity: .9; }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .step::before { color: var(--sky); } }
+    .step h3 { font-size: 1.05rem; margin: 6px 0; }
+    .step p { color: var(--muted); font-size: .95rem; }
+
+    /* Stack */
+    .stack { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .stack h3 { font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+
+    /* Contact */
+    .contact { background: linear-gradient(135deg, var(--night), var(--night-2)); color: #fff; border-radius: 24px; padding: 56px 28px; text-align: center; position: relative; overflow: hidden; }
+    .contact h2 { color: #fff; }
+    .contact p { color: #C9D6E6; max-width: 600px; margin: 0 auto; }
+    .contact .cta { justify-content: center; }
+
+    footer { padding: 36px 0 48px; color: var(--muted); font-size: .92rem; }
+    footer .wrap { display: flex; flex-wrap: wrap; gap: 14px 28px; justify-content: space-between; }
+    footer nav { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--ink); }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="stars" aria-hidden="true"></div>
+    <nav class="nav" aria-label="Main">
+      <div class="wrap">
+        <a class="brand" href="#top" aria-label="Skylabs home">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#13294A"/><path d="M14 44 L32 14 L50 44" fill="none" stroke="#7DD3FC" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="44" r="5" fill="#F5B942"/></svg>
+          skylabs
+        </a>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Our apps</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="wrap" id="top">
+      <span class="eyebrow">Web &amp; mobile app studio · India</span>
+      <h1>We build apps that are <em>precise, private and made to last.</em></h1>
+      <p class="lede">Skylabs designs and engineers professional web and mobile applications, from native Android
+        and cross-platform Flutter to fast, accessible web. We ship our own products to the same standard we
+        build for clients: tested, documented and respectful of the people who use them.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#contact">Start a project</a>
+        <a class="btn btn-ghost" href="#work">See our apps</a>
+      </div>
+      <div class="proof" aria-label="Highlights">
+        <span><b>2</b> production apps</span>
+        <span><b>Android · iOS · Web</b></span>
+        <span><b>Offline-first</b> by default</span>
+        <span><b>No ads, no tracking</b> in our products</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="services">
+      <div class="wrap">
+        <span class="kicker">What we do</span>
+        <h2>End-to-end product engineering</h2>
+        <p class="intro">From the first sketch to a signed release on the store, one team owns the whole path,
+          so nothing is lost between design, code and delivery.</p>
+        <div class="grid">
+          <div class="card">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div>
+            <h3>Native Android</h3>
+            <p>Kotlin and Jetpack Compose with Material 3, a modular Clean Architecture, and exact alarms,
+              widgets and background work that hold up in the real world.</p>
+            <div class="tags"><span>Kotlin</span><span>Compose</span><span>Material 3</span></div>
+          </div>
+          <div class="card">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="9" height="16" rx="2"/><rect x="13" y="4" width="9" height="16" rx="2"/></svg></div>
+            <h3>Cross-platform mobile</h3>
+            <p>One Flutter codebase for Android and iOS, with encrypted local storage, on-device search and
+              OCR, and multilingual interfaces.</p>
+            <div class="tags"><span>Flutter</span><span>Dart</span><span>Android &amp; iOS</span></div>
+          </div>
+          <div class="card">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <h3>Web applications</h3>
+            <p>Responsive, accessible web apps and fast marketing sites that work on any screen, load quickly
+              and rank well in search.</p>
+            <div class="tags"><span>Responsive</span><span>Accessible</span><span>SEO</span></div>
+          </div>
+          <div class="card">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.4l-4.8 2.5.9-5.4-3.9-3.8 5.4-.8z"/><path d="M5 21h14"/></svg></div>
+            <h3>Product, design &amp; launch</h3>
+            <p>Product definition, UX and brand, privacy policies, store listings, in-app purchases and signed
+              releases, so the app reaches its users properly.</p>
+            <div class="tags"><span>UX</span><span>Play Console</span><span>Billing</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <span class="kicker">Our apps</span>
+        <h2>Built and owned by Skylabs</h2>
+        <p class="intro">Our own products are where we prove our standards. Each tackles a demanding domain,
+          and each keeps your data on your phone.</p>
+        <div class="products">
+          <article class="product vm">
+            <div class="top">
+              <img src="vedic-mitra/logo.png" alt="Vedic Mitra logo" width="72" height="72" />
+              <div><h3>Vedic Mitra</h3><p>Your panchang, computed for your sky.</p></div>
+            </div>
+            <div class="body">
+              <p>An Android companion for Vedic timekeeping and reference. Every timing is calculated on the
+                device for your exact coordinates, not looked up from a table.</p>
+              <ul>
+                <li>Full daily panchanga, muhurta, Choghadiya and festivals</li>
+                <li>Kundali with seventeen divisional charts, three dasha systems and matchmaking</li>
+                <li>Reminders that fire on time and survive a restart</li>
+                <li>Samskaras, Vastu and Ayurveda cited from their source texts</li>
+              </ul>
+              <div class="links">
+                <a href="vedic-mitra/">Learn more →</a>
+                <a href="vedic-mitra/privacy/">Privacy</a>
+                <span class="status">Kotlin · Compose · Android</span>
+              </div>
+            </div>
+          </article>
+          <article class="product lm">
+            <div class="top">
+              <img src="legal-mitra/icon.png" alt="Legal Mitra icon" width="72" height="72" />
+              <div><h3>Legal Mitra</h3><p>Indian law and your legal work, on your phone.</p></div>
+            </div>
+            <div class="body">
+              <p>Bare Acts with their versions, judgments and citations, research, matters and documents for
+                practitioners, students, teachers and citizens. It works offline and needs no account.</p>
+              <ul>
+                <li>Acts and sections with dated versions and old-to-new law mappings</li>
+                <li>Judgments by paragraph, with the cases that cite, follow or overrule them</li>
+                <li>Matters, hearings and deadlines, with your work encrypted on the device</li>
+                <li>English, हिन्दी and తెలుగు, with optional AI using your own provider key</li>
+              </ul>
+              <div class="links">
+                <a href="legal-mitra/">Learn more →</a>
+                <a href="legal-mitra/privacy/">Privacy</a>
+                <span class="status">Flutter · Android &amp; iOS</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="wrap">
+        <span class="kicker">How we work</span>
+        <h2>Engineering you can trust</h2>
+        <p class="intro">The same principles run through every app we ship, ours and yours.</p>
+        <div class="grid">
+          <div class="card">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+            <h3>Accuracy, verified</h3>
+            <p>Results are checked against independent references before release, and every app ships with an
+              automated test suite.</p>
+          </div>
+          <div class="card">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg></div>
+            <h3>Private by design</h3>
+            <p>Offline-first and on-device by default, with encryption at rest. No servers to breach, no
+              account to create, no analytics.</p>
+          </div>
+          <div class="card">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12l4 4v12H4z"/><path d="M8 12h8M8 16h5"/></svg></div>
+            <h3>Decisions written down</h3>
+            <p>Architecture decision records, release runbooks and source citations, so the product stays
+              maintainable long after launch.</p>
+          </div>
+          <div class="card">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+            <h3>Respectful UX</h3>
+            <p>Clean Material design, light and dark themes, accessible contrast and no dark patterns. Users
+              come back because the app is useful.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <span class="kicker">Process</span>
+        <h2>From idea to store, in clear stages</h2>
+        <p class="intro">We build in gates. Each stage ends with a working, tested build you can review before the next one starts.</p>
+        <div class="steps">
+          <div class="step"><h3>Discover</h3><p>We map the domain, the users and the constraints, and agree on a written specification.</p></div>
+          <div class="step"><h3>Design</h3><p>Flows, screens and architecture are set out and decided before code begins.</p></div>
+          <div class="step"><h3>Build &amp; verify</h3><p>Feature by feature, each gate passing its tests, analysis and on-device checks.</p></div>
+          <div class="step"><h3>Launch &amp; grow</h3><p>Signed releases, store listing, privacy policy, then updates as your users ask for more.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <span class="kicker">Technology</span>
+        <h2>A modern, proven stack</h2>
+        <p class="intro">We choose tools for longevity and performance, not novelty.</p>
+        <div class="stack">
+          <div class="card"><h3>Mobile</h3><div class="tags"><span>Kotlin</span><span>Jetpack Compose</span><span>Flutter</span><span>Dart</span><span>Room / SQLite</span><span>WorkManager</span></div></div>
+          <div class="card"><h3>Web</h3><div class="tags"><span>HTML &amp; CSS</span><span>TypeScript</span><span>Responsive design</span><span>Static hosting</span></div></div>
+          <div class="card"><h3>Quality &amp; delivery</h3><div class="tags"><span>Unit &amp; widget tests</span><span>CI</span><span>Gradle</span><span>Play Console</span><span>App signing</span></div></div>
+          <div class="card"><h3>Integrations</h3><div class="tags"><span>Google Play Billing</span><span>Drive / OneDrive / Dropbox</span><span>On-device OCR</span><span>AI (BYOK)</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact">
+          <div class="stars" aria-hidden="true"></div>
+          <span class="kicker" style="color:var(--sky)">Let's talk</span>
+          <h2>Have an app in mind?</h2>
+          <p>Tell us what you want to build. We'll reply with honest questions, a clear plan and what it will take.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="mailto:skylabs.in@gmail.com?subject=Project%20enquiry">skylabs.in@gmail.com</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/imskylab/" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Skylabs · Jayvardhan Potabatti. All rights reserved.</span>
+      <nav aria-label="Footer">
+        <a href="vedic-mitra/">Vedic Mitra</a>
+        <a href="legal-mitra/">Legal Mitra</a>
+        <a href="https://github.com/imskylab" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/imskylab/" rel="noopener">LinkedIn</a>
+        <a href="mailto:skylabs.in@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
