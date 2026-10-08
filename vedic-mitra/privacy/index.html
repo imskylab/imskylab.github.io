@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Vedic Mitra</title>
+  <meta name="description" content="Privacy policy for the Vedic Mitra Android app: it collects nothing, sends nothing to its developer, and has no servers.">
+  <style>
+    :root {
+      --bg: #fbf7ef; --fg: #2a1d17; --muted: #6b5a4e; --accent: #7c1d1d; --rule: #e6dccb; --panel: #f3ebdc;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #1b1512; --fg: #efe6da; --muted: #b9a998; --accent: #e7a39a; --rule: #3a2e27; --panel: #251d19; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--fg);
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+      padding: 32px 16px 64px;
+    }
+    main { max-width: 760px; margin: 0 auto; }
+    h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 8px; color: var(--accent); }
+    h2 { font-size: 1.2rem; margin: 36px 0 8px; padding-top: 16px; border-top: 1px solid var(--rule); }
+    p, li { margin: 8px 0; }
+    ul { padding-left: 22px; }
+    .meta { color: var(--muted); font-size: .95rem; margin: 0 0 24px; }
+    .short { background: var(--panel); border-radius: 12px; padding: 16px 20px; }
+    .short h2 { border: 0; padding: 0; margin-top: 0; }
+    code { font-size: .9em; background: var(--panel); padding: 1px 5px; border-radius: 4px; }
+    a { color: var(--accent); }
+    .table-wrap { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .95rem; }
+    th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--rule); }
+    th { color: var(--muted); font-weight: 600; }
+    footer { margin-top: 48px; color: var(--muted); font-size: .9rem; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy — Vedic Mitra</h1>
+  <p class="meta"><strong>Effective date:</strong> 17 September 2026 · <strong>Applies to:</strong> the Vedic Mitra Android application</p>
+
+  <section class="short">
+    <h2>The short version</h2>
+    <p>Vedic Mitra collects nothing, sends nothing to its developer, and has no servers. There is no account, no
+      analytics, no crash reporting, no advertising, and no tracking of any kind. Everything you enter — your birth
+      details, saved locations, reminders, questionnaire answers, japa and meditation history — stays in the app's
+      private storage on your device, and is deleted when you uninstall the app.</p>
+    <p>The app contains no analytics, advertising or crash-reporting library, and no network client of its own.</p>
+    <p>If you buy <strong>Vedic Mitra Pro</strong>, Google Play sells it and handles the payment. The app learns only
+      whether Pro is owned, and remembers that on your device.</p>
+  </section>
+
+  <h2>What the app stores, and where</h2>
+  <p>All of it lives in the app's private on-device storage (Android <code>DataStore</code>). None of it is sent to the
+    developer or to anyone else.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Data</th><th>Why it exists</th></tr></thead>
+      <tbody>
+        <tr><td>Birth profiles (name, date, time, place)</td><td>Computing kundali, dasha, matchmaking, rashifal and muhurta</td></tr>
+        <tr><td>Saved locations and coordinates</td><td>Computing the panchanga for the right place</td></tr>
+        <tr><td>Reminders and alert preferences</td><td>Scheduling muhurta, Choghadiya and tithi notifications</td></tr>
+        <tr><td>Japa and meditation session history</td><td>Streaks and progress</td></tr>
+        <tr><td>Ayurveda questionnaire answers and result, and whether its notice was accepted</td><td>Showing the result again, per profile, until you change or delete it</td></tr>
+        <tr><td>Theme, colour and calendar-reckoning preferences</td><td>Remembering how you like the app to work</td></tr>
+        <tr><td>Whether Vedic Mitra Pro is unlocked</td><td>Keeping Pro working offline once Google Play has confirmed the purchase</td></tr>
+        <tr><td>Receipts for reports you bought, and a random secret made on the device</td><td>Letting you make a bought report again; the secret turns each report's person into a key that means nothing elsewhere</td></tr>
+        <tr><td>PDF reports you ask for (temporary files)</td><td>Handing a kundali or match report to the app you share it with; cleared from the app's cache after a day</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Deleting a birth profile deletes the questionnaire answers kept for it.</p>
+  <p>There is no backup to any cloud service operated by the developer. If you have Android's own backup enabled,
+    Android may include app data in your Google account backup under Google's terms; that is a platform behaviour,
+    outside the developer's control.</p>
+
+  <h2>Permissions and sensors, and exactly what each is for</h2>
+  <ul>
+    <li><strong>Location</strong> (<code>ACCESS_COARSE_LOCATION</code>, <code>ACCESS_FINE_LOCATION</code>) — optional.
+      Used only to work out your coordinates, so sunrise, tithi and muhurta timings, and the compass's correction to
+      true north, are right for where you are. Coordinates are used in on-device calculations and stored locally; the
+      app never sends them anywhere. On devices with Google Play services, the location request itself is answered by
+      Google Play services, under Google's privacy policy and your device's location settings. You can skip this
+      entirely and enter locations manually.</li>
+    <li><strong>Internet</strong> (<code>INTERNET</code>) — used for one thing: Android's own <code>Geocoder</code>
+      service, when you search for a city by name while adding a location. That lookup is performed by the operating
+      system, not by this app, and is subject to your device vendor's privacy policy. If it fails, the app carries on
+      and you can enter coordinates directly. <strong>No other feature of the app uses the network.</strong>
+      Time-zone resolution, the ephemeris and the whole panchanga engine run offline. Purchases are handled by the
+      Google Play Store app on your device, which contacts Google itself.</li>
+    <li><strong>Google Play billing</strong> (<code>com.android.vending.BILLING</code>) — lets the app ask the Google
+      Play Store app to show its purchase sheet for Vedic Mitra Pro, and to say whether your Google account owns it.
+      You enter payment details in Google Play, never in the app. The app receives no payment details: only whether
+      the purchase is complete or pending, and a purchase token it hands back to Google Play to confirm the
+      purchase.</li>
+    <li><strong>Motion sensors</strong> — the Vastu compass reads the phone's orientation sensor while the compass is
+      open, to show a bearing. The readings are used on the spot and are neither stored nor sent.</li>
+    <li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>) — to show the reminders you create.</li>
+    <li><strong>Exact alarms</strong> (<code>SCHEDULE_EXACT_ALARM</code>), <strong>full-screen intent</strong>,
+      <strong>vibrate</strong> and <strong>foreground service</strong> — to make muhurta reminders fire at the right
+      minute and ring when you ask them to.</li>
+    <li><strong>Boot completed</strong> (<code>RECEIVE_BOOT_COMPLETED</code>) — to restore your scheduled reminders
+      after a restart, so they are not silently lost.</li>
+  </ul>
+
+  <h2>Buying Vedic Mitra Pro</h2>
+  <p>Pro is sold by Google Play, under the Google Play Terms of Service and Google's privacy policy. Google processes
+    the payment and keeps the order. As the seller, the developer can see the order records Google Play gives every
+    seller, such as order numbers, products, prices, dates and countries, and uses them only for accounting, refunds
+    and answering questions about a purchase. The developer never receives card, bank or UPI details. Refunds and
+    cancellations follow Google Play's policies.</p>
+  <p>Reports can also be bought one at a time, for one person or one pair. To tie a report purchase to its person, the
+    app attaches a key to it: a keyed hash, made with a secret that never leaves your device, of which profile or pair
+    it is for. Google keeps that key with the order, and it reveals nothing about the person: not a name, a birth date
+    or a place. A partner's details entered for a single match report are used for that report only and are not
+    saved. Google Play does not restore a consumed report purchase, so a reinstall or cleared app data loses it; the
+    app suggests saving a copy of the PDF.</p>
+
+  <h2>Sharing a report</h2>
+  <p><strong>Share as PDF</strong>, on the kundali and matchmaking screens, writes a report to the app's cache on your
+    device and opens Android's share sheet. The report goes only where you choose to send it; after that, the
+    receiving app's own privacy policy applies. The app keeps no record of where it went.</p>
+
+  <h2>What the app does not do</h2>
+  <ul>
+    <li>No user accounts, sign-in or identifiers.</li>
+    <li>No analytics, telemetry or usage statistics.</li>
+    <li>No crash or performance reporting.</li>
+    <li>No advertising SDKs, and no advertising identifiers.</li>
+    <li>No sale or sharing of personal information; there is nothing to sell, and no recipient.</li>
+    <li>No profiling, and no automated decisions about you.</li>
+  </ul>
+
+  <h2>Links that leave the app</h2>
+  <p>The About screen links to GitHub and LinkedIn, and the Support screen to this policy. Tapping one opens your
+    browser and hands you to that service, where <strong>its</strong> privacy policy applies and this one stops. The app
+    learns nothing about whether you followed a link, or what you did next.</p>
+  <p><strong>Report a bug</strong> opens your email app with a message addressed to the developer. Nothing is sent
+    unless you send it, and what you write is handled only to answer you.</p>
+
+  <h2>Children</h2>
+  <p>Vedic Mitra is not directed at children, and collects no data from anyone, including children.</p>
+
+  <h2>Your rights</h2>
+  <p>Because nothing leaves your device, the developer holds no data of yours to access, export, correct or erase. To
+    delete everything the app holds, clear the app's storage or uninstall it. If you have emailed the developer and
+    want that correspondence deleted, ask at the address below. Records of a purchase are held by Google; see them,
+    or ask for a refund, through Google Play.</p>
+
+  <h2>Third-party components</h2>
+  <p>The app is built on open-source libraries; where Google Play services is present, Google's Play services Location
+    library for the optional location feature; and the Google Play Billing Library, to buy and restore Vedic Mitra
+    Pro. None of them is configured to send data to the developer.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>When this policy changes, the effective date above changes with it, and the new version is published at the same
+    address.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: <a href="mailto:skylabs.in@gmail.com">skylabs.in@gmail.com</a> (Jayvardhan
+    Potabatti, the developer).</p>
+
+  <footer>© 2026 Jayvardhan Potabatti. All rights reserved.</footer>
+</main>
+</body>
+</html>

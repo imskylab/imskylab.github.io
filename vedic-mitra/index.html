@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--
+  Copyright (c) 2026 Jayvardhan Potabatti. All rights reserved.
+
+  The public landing page for Vedic Mitra. It is written to be published, with logo.png beside it, at
+  https://imskylab.github.io/vedic-mitra/ from the public repository imskylab/imskylab.github.io; the
+  canonical and social-card addresses below assume that. It never links into the private app repository.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Vedic Mitra — Panchang, Jyotish, Vastu and Ayurveda for Android</title>
+  <meta name="description" content="Vedic Mitra computes the panchang, muhurta, festivals and your birth chart for your exact location, offline, and cites the texts behind its samskaras, Vastu and Ayurveda. No ads, no account, no tracking." />
+  <meta name="keywords" content="panchang, panchanga, hindu calendar, vedic astrology, jyotish, kundali, muhurta, choghadiya, tithi, nakshatra, festivals, samskara, vastu, ayurveda, offline panchang app, android" />
+  <meta name="author" content="Jayvardhan Potabatti" />
+  <link rel="canonical" href="https://imskylab.github.io/vedic-mitra/" />
+  <link rel="icon" href="logo.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Vedic Mitra — your panchang, computed for your sky" />
+  <meta property="og:description" content="Panchang, muhurta, festivals, kundali, Vastu and Ayurveda for Android. Computed on your phone for your location; no ads, no account, no tracking." />
+  <meta property="og:url" content="https://imskylab.github.io/vedic-mitra/" />
+  <meta property="og:image" content="https://imskylab.github.io/vedic-mitra/logo.png" />
+  <meta property="og:site_name" content="Vedic Mitra" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Vedic Mitra — your panchang, computed for your sky" />
+  <meta name="twitter:description" content="Panchang, muhurta, festivals, kundali, Vastu and Ayurveda for Android. Offline, no ads, no tracking." />
+  <meta name="twitter:image" content="https://imskylab.github.io/vedic-mitra/logo.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Vedic Mitra",
+    "operatingSystem": "Android",
+    "applicationCategory": "LifestyleApplication",
+    "description": "An Android companion for Vedic timekeeping and reference: panchanga, muhurta, festivals, kundali and matchmaking computed on the device for the user's location, with the samskaras, Vastu and Ayurveda cited from named texts.",
+    "url": "https://imskylab.github.io/vedic-mitra/",
+    "author": { "@type": "Person", "name": "Jayvardhan Potabatti" }
+  }
+  </script>
+
+  <style>
+    :root {
+      --gold: #C79A3B;
+      --gold-light: #E4C56A;
+      --maroon: #5E1B22;
+      --maroon-deep: #43121a;
+      --ink: #2b1a12;
+      --paper: #FBF6EC;
+      --card: #ffffff;
+      --line: #ecdfca;
+      --muted: #6a5a4c;
+      --band: #ffffff;
+      --link: #5E1B22;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #efe4d4;
+        --paper: #17110e;
+        --card: #211915;
+        --line: #3a2d25;
+        --muted: #bba997;
+        --band: #1d1612;
+        --link: #E4C56A;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+    }
+    a { color: var(--link); }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+
+    header.hero {
+      background: linear-gradient(160deg, var(--maroon) 0%, var(--maroon-deep) 100%);
+      color: #fff8ec;
+      text-align: center;
+      padding: 60px 20px 68px;
+      border-bottom: 4px solid var(--gold);
+    }
+    .hero img.logo { width: 120px; height: 120px; border-radius: 26px; box-shadow: 0 8px 30px rgba(0,0,0,.35); }
+    .hero h1 { font-size: clamp(2rem, 6vw, 2.6rem); margin: 20px 0 6px; letter-spacing: .5px; }
+    .hero .sub { font-size: 1.2rem; color: var(--gold-light); font-weight: 500; }
+    .hero p.lede { max-width: 660px; margin: 18px auto 0; color: #f3e6d0; font-size: 1.05rem; }
+    .cta { margin-top: 28px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 12px 24px; border-radius: 999px;
+      font-weight: 700; text-decoration: none; font-size: 1rem;
+    }
+    .btn.primary { background: var(--gold); color: var(--maroon-deep); }
+    .btn.ghost { background: rgba(255,255,255,.08); color: #fff8ec; border: 1.5px solid var(--gold); }
+    .badges { margin-top: 24px; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+    .badges span {
+      font-size: .8rem; background: rgba(255,255,255,.12); color: var(--gold-light);
+      padding: 5px 12px; border-radius: 999px; border: 1px solid rgba(228,197,106,.35);
+    }
+
+    section { padding: 56px 0; }
+    section h2 { font-size: 1.7rem; color: var(--link); text-align: center; margin-bottom: 8px; }
+    section .tag { text-align: center; color: var(--muted); margin: 0 auto 32px; max-width: 680px; }
+    h3.group {
+      font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted);
+      margin: 32px 0 12px;
+    }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .feature {
+      background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+    }
+    .feature h4 { font-size: 1.05rem; color: var(--link); margin-bottom: 6px; }
+    .feature p { font-size: .95rem; color: var(--muted); }
+    .feature ul { font-size: .95rem; color: var(--muted); padding-left: 20px; }
+    .feature li { margin: 4px 0; }
+    .pro {
+      display: inline-block; vertical-align: middle; margin-left: 6px; padding: 1px 8px;
+      font-size: .7rem; font-weight: 600; letter-spacing: .04em; border-radius: 999px;
+      border: 1px solid var(--gold); color: var(--link);
+    }
+
+    .band { background: var(--band); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .band .feature { background: var(--paper); }
+
+    .note-box {
+      max-width: 760px; margin: 0 auto; background: var(--card); border: 1px solid var(--line);
+      border-left: 4px solid var(--gold); border-radius: 10px; padding: 16px 20px; color: var(--muted);
+      font-size: .95rem;
+    }
+
+    footer {
+      background: var(--maroon-deep); color: #e9d7bd; text-align: center;
+      padding: 40px 20px; font-size: .92rem;
+    }
+    footer a { color: var(--gold-light); }
+    footer .note { color: #b79a86; font-size: .82rem; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <img class="logo" src="logo.png" alt="Vedic Mitra emblem" width="120" height="120" />
+      <h1>Vedic Mitra</h1>
+      <div class="sub">Your panchang, computed for your sky.</div>
+      <p class="lede">
+        An Android companion for Vedic timekeeping and reference. The panchanga, muhurta, festivals and your
+        birth chart are worked out on your phone for your exact location, and the samskaras, Vastu and Ayurveda
+        are cited from the texts they come from. No ads, no account, no tracking. Free to use, with a one-time
+        Pro unlock for the kundali, matchmaking and more.
+      </p>
+      <div class="cta">
+        <span class="btn primary" aria-disabled="true">Coming soon to Google Play</span>
+        <a class="btn ghost" href="mailto:skylabs.in@gmail.com?subject=Vedic%20Mitra">Get in touch</a>
+      </div>
+      <div class="badges">
+        <span>Works offline</span>
+        <span>No ads</span>
+        <span>No account</span>
+        <span>No tracking</span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <h2>What it does</h2>
+      <p class="tag">Timings are calculated on the device for your coordinates, not looked up from a table.</p>
+
+      <h3 class="group">The day</h3>
+      <div class="grid">
+        <div class="feature"><h4>Full daily panchanga</h4><p>Tithi, nakshatra, yoga, karana, paksha, vara, ayana, ritu, maasa in either reckoning, samvatsara and the era years, named by the sunrise convention.</p></div>
+        <div class="feature"><h4>Muhurta and kalams</h4><p>Brahma and Abhijit Muhurta, Dur Muhurta, Varjyam, Rahu, Yamaganda and Gulika, and all sixteen Choghadiya windows, drawn as a timeline of the day.</p></div>
+        <div class="feature"><h4>Sky and planets</h4><p>Sunrise and sunset, moonrise and moonset, the moon's phase, and the rashi of the Sun, Moon, Guru and Shukra with their next pravesh.</p></div>
+        <div class="feature"><h4>Festivals and vrats</h4><p>Upcoming festivals, dated by their puja window where the tradition times one, with Ekadashi, Purnima, Amavasya, Sankashti, Pradosh and the Sankrantis.</p></div>
+        <div class="feature"><h4>Reminders that fire</h4><p>Exact alarms for muhurta, Choghadiya and tithi events that survive a restart, with your choice of lead time. With Pro, any of them can ring as a full-screen alarm.</p></div>
+        <div class="feature"><h4>A monthly calendar</h4><p>This month and the months either side, each day with its full panchanga, festivals and seasonal routine. With Pro, any month, past or future.</p></div>
+      </div>
+
+      <h3 class="group">Jyotish</h3>
+      <div class="grid">
+        <div class="feature"><h4>Kundali <span class="pro">Pro</span></h4><p>The natal chart with seventeen divisional charts, planetary positions to the arcminute, ashtakavarga and the named yogas in the chart.</p></div>
+        <div class="feature"><h4>Dashas <span class="pro">Pro</span></h4><p>Vimshottari, Ashtottari and Yogini, three levels deep.</p></div>
+        <div class="feature"><h4>Matchmaking <span class="pro">Pro</span></h4><p>Ashtakoota across all eight kootas, the four porutham, and Mangal dosha with its classical cancellations, each with its working shown.</p></div>
+        <div class="feature"><h4>Choosing a time</h4><p>Ranked muhurta windows for an activity, for everyone. With Pro, chosen for one person or a couple, and searched up to 90 days ahead.</p></div>
+        <div class="feature"><h4>Reports</h4><p>A kundali or a match as a PDF, made on your phone, to print or send to family. Bought one at a time, with or without Pro; Pro includes your own kundali.</p></div>
+        <div class="feature"><h4>Rashifal</h4><p>A daily and weekly outlook computed from Chandrabala and Tarabala, reading the transit's traditional meaning rather than inventing predictions.</p></div>
+      </div>
+
+      <h3 class="group">Reference, cited from the texts</h3>
+      <div class="grid">
+        <div class="feature"><h4>The samskaras</h4><p>Thirteen life-cycle rites as the grhyasutras describe them, each with its passage and the muhurta for it.</p></div>
+        <div class="feature"><h4>Vastu</h4><p>The eight quarters and the Vastu Purusha Mandala, a live compass corrected to true north, what Brihat Samhita places where, and proportion from the Manasara.</p></div>
+        <div class="feature"><h4>Ayurveda</h4><p>The daily and seasonal routine, foods and their qualities, a prakriti questionnaire, and everyday complaints and common herbs as the texts record them.</p></div>
+        <div class="feature"><h4>Stotra, japa and meditation</h4><p>A library of stotras and mantras, a 108-bead japa counter and a meditation timer, the last two with daily streaks.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Free, and Pro</h2>
+      <p class="tag">No subscription and no ads. Pro is a single purchase through Google Play, and stays yours.</p>
+      <div class="grid">
+        <div class="feature">
+          <h4>Always free</h4>
+          <ul>
+            <li>Today's panchanga, festivals, and the calendar for this month and either side</li>
+            <li>Every reminder, as a notification</li>
+            <li>Muhurta for everyone, and rashifal</li>
+            <li>One birth profile</li>
+            <li>Vastu, the samskaras, stotra, japa and meditation</li>
+            <li>All of Ayurveda</li>
+          </ul>
+        </div>
+        <div class="feature">
+          <h4>Vedic Mitra Pro adds</h4>
+          <ul>
+            <li>The kundali, with every divisional chart and dasha</li>
+            <li>Matchmaking</li>
+            <li>Profiles for the whole family</li>
+            <li>Muhurta for a person or a couple, up to 90 days ahead</li>
+            <li>Reminders that ring</li>
+            <li>Your kundali report as a PDF, and the calendar for any month</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>How it is made</h2>
+      <p class="tag">Three commitments that shape every screen.</p>
+      <div class="grid">
+        <div class="feature"><h4>Computed, and checked</h4><p>The astronomy is derived from your coordinates, and calculations are cross-checked against published almanacs before release.</p></div>
+        <div class="feature"><h4>Cited, not invented</h4><p>Anything the app says about a tradition names the text it comes from, and says so plainly where a source is not yet recorded. Outcomes and promises the texts attach are left out.</p></div>
+        <div class="feature"><h4>Offline and private</h4><p>Your birth details, places and history stay on your phone. There are no servers, no account and no analytics. Read the <a href="privacy/">privacy policy</a>.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="note-box">
+        <strong>A note on Ayurveda.</strong> What the app shows is history and tradition, reported from named texts,
+        and not medical advice. It gives no doses, and nothing in it replaces a doctor's care.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p><strong>Vedic Mitra</strong> for Android, coming soon to Google Play.</p>
+      <p style="margin-top:10px;">
+        <a href="privacy/">Privacy policy</a> ·
+        <a href="mailto:skylabs.in@gmail.com?subject=Vedic%20Mitra">Contact</a> ·
+        <a href="https://www.linkedin.com/in/imskylab/">LinkedIn</a>
+      </p>
+      <p class="note">© 2026 Jayvardhan Potabatti. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
