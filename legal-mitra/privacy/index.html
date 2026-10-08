@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legal Mitra — Privacy Policy</title>
+<style>
+:root{--bg:#fff;--fg:#1b1f24;--muted:#57606a;--line:#d0d7de;--link:#0b57d0}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1419;--fg:#e6edf3;--muted:#9da7b3;--line:#30363d;--link:#8ab4f8}}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+main{max-width:760px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:1.8rem;line-height:1.25;margin:0 0 .5rem}
+h2{font-size:1.25rem;margin:2rem 0 .5rem;padding-top:.5rem;border-top:1px solid var(--line)}
+a{color:var(--link)}
+.table{overflow-x:auto}
+table{border-collapse:collapse;width:100%;margin:.5rem 0}
+th,td{border:1px solid var(--line);padding:.5rem;text-align:left;vertical-align:top}
+footer{margin-top:3rem;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+<h1>Legal Mitra — Privacy Policy</h1>
+<p><strong>Effective date:</strong> 8 October 2026</p>
+<p>Legal Mitra is an Indian legal information app for Android and iOS, created and developed by <strong>Jayvardhan Potabatti</strong> ("I", "me"). Contact: <strong><a href="mailto:skylabs.in@gmail.com">skylabs.in@gmail.com</a></strong>.</p>
+<h2>The short version</h2>
+<ul>
+<li>Legal Mitra has <strong>no servers and no accounts</strong>. I do not receive your data.</li>
+<li>There are <strong>no ads, no analytics and no crash-reporting or tracking SDKs</strong>.</li>
+<li>What you create stays <strong>encrypted on your phone</strong>.</li>
+<li>Anything that leaves your phone goes only where <strong>you</strong> choose to send it: your own cloud storage, Google Classroom or an AI provider. It goes directly from your phone to that service, under that service's own terms.</li>
+</ul>
+<h2>What is stored on your phone</h2>
+<p>When you create a local profile, the app stores on your device:</p>
+<ul>
+<li>your profile and settings;</li>
+<li>matters, parties, hearings, tasks, deadlines and the matter activity log;</li>
+<li>notes, bookmarks, research folders, saved searches and search history (search history can be turned off and cleared);</li>
+<li>documents you import or scan, the text recognised from them, and your annotations;</li>
+<li>learning progress, flashcards, quiz attempts, case briefs and teaching material;</li>
+<li>citizen help journeys and legal-literacy progress.</li>
+</ul>
+<p>This data is kept in a database encrypted with SQLCipher, and document files are encrypted with AES-GCM. The encryption keys are held in the Android Keystore or the iOS Keychain. The app turns off Android's automatic cloud backup and device-transfer copies of its data.</p>
+<p>Text recognition (OCR) runs <strong>on the device</strong>. Your documents are not uploaded for it.</p>
+<p>Uninstalling the app, or using <strong>Me → Delete local profile</strong>, deletes this data and its keys from the phone.</p>
+<h2>Google ML Kit</h2>
+<p>On-device text recognition and the Android document scanner use Google ML Kit. The documents and their text stay on your phone. Google states that ML Kit may send Google anonymous usage and performance information, and may download updated models. This is governed by Google's terms: <a href="https://developers.google.com/ml-kit/terms">https://developers.google.com/ml-kit/terms</a></p>
+<h2>Permissions</h2>
+<div class="table"><table><thead><tr><th scope="col">Permission</th><th scope="col">Why</th></tr></thead><tbody><tr><td>Notifications (Android POST_NOTIFICATIONS)</td><td>Hearing, deadline and task reminders you set</td></tr><tr><td>Run at start-up (Android RECEIVE_BOOT_COMPLETED)</td><td>To restore your reminders after the phone restarts</td></tr><tr><td>Biometrics / Face ID (USE_BIOMETRIC, NSFaceIDUsageDescription)</td><td>Optional app lock. The app never receives your fingerprint or face data; the system only tells it whether unlocking succeeded</td></tr><tr><td>Internet and network state</td><td>Only for the optional services below and for purchases; the app works offline otherwise</td></tr><tr><td>Billing (Android)</td><td>In-app purchase of Legal Mitra Pro through Google Play</td></tr><tr><td>Camera and photos (iOS only)</td><td>Only when you scan or import a document</td></tr></tbody></table></div>
+<p>On Android, documents are chosen with the system file picker and scanned with the system scanner, so the app does not request camera or storage permissions.</p>
+<h2>Legal content</h2>
+<p>Acts, sections, judgments and other legal material are installed on the phone as signed content packages. Reading and searching them happens on the device and sends nothing anywhere.</p>
+<h2>Optional services you connect</h2>
+<p>These are <strong>off until you set them up</strong>. Each connects your phone <strong>directly</strong> to the provider; I never see the data or the credentials. The provider's own privacy policy and terms apply.</p>
+<p><strong>Cloud backup and sync (Google Drive, Microsoft OneDrive, Dropbox).</strong> Backups and sync data are <strong>encrypted on your phone before upload</strong>, with a recovery key that only you hold. They are stored in the app's own folder in your account. I cannot read them. Legal Mitra does not sell storage; your provider's storage terms and charges apply.</p>
+<p><strong>Google Classroom.</strong> If you connect it, the app asks Google only for the permissions the feature needs. It shows your classes and coursework but does not keep a copy of them. You can disconnect at any time.</p>
+<p><strong>AI assistance with your own key (OpenAI, Google Gemini, Anthropic, Ollama or an OpenAI-compatible server).</strong> AI is off by default. When you use an AI feature, the text it needs (for example a section, a judgment or your question) goes directly from your phone to the provider you chose. Your own documents or matters are sent only after the app shows you exactly what will be sent and you confirm. Matter review never includes client names or contact details. Your API key is stored in the phone's secure storage. You pay the provider directly; Legal Mitra does not sell AI credits.</p>
+<p>Sign-in to these services uses the provider's own sign-in page in your browser. Access tokens are kept in the phone's secure storage and are removed when you disconnect or delete your local profile.</p>
+<h2>Purchases</h2>
+<p>Legal Mitra Pro is bought through Google Play or the Apple App Store, which process the payment. The app learns only whether you own Pro. I do not receive your payment details.</p>
+<h2>Children</h2>
+<p>Legal Mitra is intended for users aged 18 and over.</p>
+<h2>Your choices</h2>
+<ul>
+<li><strong>Delete</strong> everything on the phone (Me → Delete local profile), or uninstall the app.</li>
+<li><strong>Disconnect</strong> cloud storage, Google Classroom or an AI provider at any time, and <strong>remove</strong> your AI key.</li>
+<li><strong>Turn off</strong> and clear search history.</li>
+</ul>
+<p>Copies you have placed in your own cloud storage or in a connected service stay there until you delete them in that service.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be posted at the same address with a new effective date.</p>
+<h2>Contact</h2>
+<p>Jayvardhan Potabatti — <a href="mailto:skylabs.in@gmail.com">skylabs.in@gmail.com</a></p>
+<footer>© 2026 Jayvardhan Potabatti.</footer>
+</main>
+</body>
+</html>
