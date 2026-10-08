@@ -15,11 +15,14 @@ repository therefore keeps serving redirects rather than being deleted.
 
 ## Legal Mitra
 
+- Landing page: https://imskylab.github.io/legal-mitra/
 - Privacy policy: https://imskylab.github.io/legal-mitra/privacy/
 
 Master copy: `docs/PRIVACY.md` in the private `imskylab/legal-mitra` repository;
 `legal-mitra/privacy/index.html` here is its HTML rendering. Change both together, with a new
-effective date.
+effective date. `legal-mitra/index.html` (the landing page) is maintained here directly.
+
+There is no page at the site root; `https://imskylab.github.io/` returns 404 by design.
 
 ## Where the source of these pages lives
 

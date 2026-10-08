@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--
+  Copyright (c) 2026 Jayvardhan Potabatti. All rights reserved.
+  The public landing page for Legal Mitra, published at https://imskylab.github.io/legal-mitra/
+  from the public repository imskylab/imskylab.github.io. It never links into the private app repository.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legal Mitra — Indian law, cases and your legal work, on your phone</title>
+  <meta name="description" content="Legal Mitra puts Bare Acts, judgments, legal research, matters and documents on your phone. It works offline, needs no account, and keeps your work encrypted on the device." />
+  <meta name="author" content="Jayvardhan Potabatti" />
+  <link rel="canonical" href="https://imskylab.github.io/legal-mitra/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Legal Mitra — Indian law on your phone, private by design" />
+  <meta property="og:description" content="Bare Acts, judgments, research, matters and documents. Offline, no account, your work encrypted on your phone." />
+  <meta property="og:url" content="https://imskylab.github.io/legal-mitra/" />
+  <meta property="og:site_name" content="Legal Mitra" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Legal Mitra",
+    "operatingSystem": "Android, iOS",
+    "applicationCategory": "ReferenceApplication",
+    "description": "An Indian legal information app: Bare Acts with their versions, judgments and citations, research, matters, documents and learning, working offline with the user's data encrypted on the device.",
+    "url": "https://imskylab.github.io/legal-mitra/",
+    "author": { "@type": "Person", "name": "Jayvardhan Potabatti" }
+  }
+  </script>
+  <style>
+    :root {
+      --navy: #0B1F33;
+      --navy-deep: #07151f;
+      --gold: #C79A3B;
+      --gold-light: #E4C56A;
+      --teal: #2F6F73;
+      --ink: #14202b;
+      --paper: #F7F9FB;
+      --card: #ffffff;
+      --line: #dbe3ea;
+      --muted: #4f5d6b;
+      --link: #0B5394;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #e6edf3;
+        --paper: #0e161d;
+        --card: #16212b;
+        --line: #26333f;
+        --muted: #a9b6c3;
+        --link: #8ab4f8;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+    }
+    a { color: var(--link); }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+    header.hero {
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
+      color: #f3f6f9;
+      text-align: center;
+      padding: 56px 16px 60px;
+      border-bottom: 4px solid var(--gold);
+    }
+    .hero h1 { font-size: clamp(2rem, 6vw, 2.6rem); margin-bottom: 6px; }
+    .hero .sub { font-size: 1.15rem; color: var(--gold-light); font-weight: 500; }
+    .hero p.lede { max-width: 640px; margin: 18px auto 0; color: #dfe7ee; font-size: 1.05rem; }
+    .badges { margin-top: 22px; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+    .badges span {
+      font-size: .85rem; background: rgba(255,255,255,.1); color: var(--gold-light);
+      padding: 5px 12px; border-radius: 999px; border: 1px solid rgba(228,197,106,.4);
+    }
+    .store { margin-top: 26px; display: inline-block; padding: 12px 24px; border-radius: 999px;
+      background: var(--gold); color: var(--navy-deep); font-weight: 700; }
+    section { padding: 48px 0; }
+    section h2 { font-size: 1.6rem; text-align: center; margin-bottom: 8px; }
+    section .tag { text-align: center; color: var(--muted); margin: 0 auto 28px; max-width: 660px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+    .feature { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+    .feature h3 { font-size: 1.05rem; margin-bottom: 6px; }
+    .feature p { font-size: .95rem; color: var(--muted); }
+    .notes { max-width: 720px; margin: 0 auto; }
+    .note { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--teal);
+      border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; }
+    .note h3 { font-size: 1rem; margin-bottom: 4px; }
+    .note p { color: var(--muted); font-size: .95rem; }
+    footer { border-top: 1px solid var(--line); padding: 28px 0 40px; text-align: center; color: var(--muted); font-size: .92rem; }
+    footer p { margin: 4px 0; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Legal Mitra</h1>
+    <p class="sub">Indian law and your legal work, on your phone</p>
+    <p class="lede">Read Bare Acts with their versions, follow judgments and citations, research, and keep
+      your matters, hearings and documents in one place. It works offline, needs no account, and keeps your
+      work encrypted on your phone.</p>
+    <div class="badges">
+      <span>Works offline</span><span>No account</span><span>No ads or tracking</span><span>English · हिन्दी · తెలుగు</span>
+    </div>
+    <p><span class="store">Coming soon to Google Play</span></p>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <h2>What it does</h2>
+        <p class="tag">For legal practitioners, law students, teachers and citizens. Each sees the tools that fit.</p>
+        <div class="grid">
+          <div class="feature"><h3>The law, with its history</h3><p>Acts and sections with dated versions, a legal dictionary and old-to-new law mappings, each showing its official source.</p></div>
+          <div class="feature"><h3>Judgments and citations</h3><p>Search cases, read judgments by paragraph, and see which later decisions cite, follow or overrule them.</p></div>
+          <div class="feature"><h3>Research</h3><p>Fast search on the phone, saved searches, bookmarks, notes and a citation tracker.</p></div>
+          <div class="feature"><h3>Matters and reminders</h3><p>Matters, hearings, tasks and deadlines with reminders, all kept on the phone.</p></div>
+          <div class="feature"><h3>Documents</h3><p>Import or scan documents, recognise their text on the device, and annotate them.</p></div>
+          <div class="feature"><h3>Learning and help</h3><p>Lessons, flashcards and quizzes for students, teaching tools, and plain-language guidance for citizens.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap notes">
+        <h2>Private by design</h2>
+        <p class="tag">There is no Legal Mitra server and no account.</p>
+        <div class="note"><h3>Your work stays on your phone</h3><p>Matters, notes and documents are encrypted on the device. Nothing is uploaded unless you choose an optional service.</p></div>
+        <div class="note"><h3>Optional services are yours</h3><p>Back up to your own Google Drive, OneDrive or Dropbox (encrypted before upload), connect Google Classroom, or use AI with your own provider key. Each connects your phone directly to that service.</p></div>
+        <div class="note"><h3>Read the privacy policy</h3><p><a href="privacy/">Legal Mitra privacy policy</a></p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap notes">
+        <h2>Please note</h2>
+        <div class="note"><h3>Legal information, not legal advice</h3><p>Legal Mitra explains the law and helps you organise your work. It does not replace a lawyer. For a decision about your own case, speak to an advocate or a legal services authority.</p></div>
+        <div class="note"><h3>Not affiliated with any government body</h3><p>Legal Mitra is an independent app. It is not affiliated with or endorsed by any government, court or authority. It uses public material from official sources such as India Code (Legislative Department, Ministry of Law and Justice), the Supreme Court of India, eCourts Services and the National Legal Services Authority, and shows the source of every text.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p><a href="privacy/">Privacy policy</a></p>
+      <p>Contact: <a href="mailto:skylabs.in@gmail.com">skylabs.in@gmail.com</a></p>
+      <p>© 2026 Jayvardhan Potabatti. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
