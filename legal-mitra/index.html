@@ -97,7 +97,10 @@
     footer { border-top: 1px solid var(--line); padding: 28px 0 40px; text-align: center; color: var(--muted); font-size: .92rem; }
     footer p { margin: 4px 0; }
       .hero .logo { display: block; width: 120px; height: 120px; margin: 0 auto 12px; }
-</style>
+    .notgov { margin: 24px auto 0; border-left: 4px solid var(--gold); }
+    .sources { max-width: 760px; margin: 0 auto; padding-left: 20px; line-height: 1.6; }
+    .sources li { margin-bottom: 10px; }
+  </style>
 </head>
 <body>
   <header class="hero">
@@ -112,6 +115,13 @@
     </div>
     <p><span class="store">Coming soon to Google Play</span></p>
   </header>
+
+  <div class="wrap">
+    <div class="note notgov" role="note">
+      <h3>Not a government app</h3>
+      <p>Legal Mitra is independent and is not affiliated with, endorsed by or representing any government, court or official publisher. Always check the official source; the links are listed below under <a href="#official-sources">Official sources</a>.</p>
+    </div>
+  </div>
 
   <main>
     <section>
@@ -143,7 +153,23 @@
       <div class="wrap notes">
         <h2>Please note</h2>
         <div class="note"><h3>Legal information, not legal advice</h3><p>Legal Mitra explains the law and helps you organise your work. It does not replace a lawyer. For a decision about your own case, speak to an advocate or a legal services authority.</p></div>
-        <div class="note"><h3>Not affiliated with any government body</h3><p>Legal Mitra is an independent app. It is not affiliated with or endorsed by any government, court or authority. It uses public material from official sources such as India Code (Legislative Department, Ministry of Law and Justice), the Supreme Court of India, eCourts Services and the National Legal Services Authority, and shows the source of every text.</p></div>
+        <div class="note"><h3>Not affiliated with any government body</h3><p>Legal Mitra is an independent app. It is not affiliated with, endorsed by or representing any government, court or official publisher. It shows the source of every legal text; check the original with the official publishers listed below.</p></div>
+      </div>
+    </section>
+
+    <section id="official-sources">
+      <div class="wrap">
+        <h2>Official sources</h2>
+        <p class="tag">The official publishers of the law and court information Legal Mitra covers. Check the original text there.</p>
+        <ul class="sources">
+          <li><strong>India Code</strong> (Legislative Department, Ministry of Law and Justice): central Acts and the Constitution. <a href="https://www.indiacode.nic.in/" rel="noopener">www.indiacode.nic.in</a> · <a href="https://legislative.gov.in/" rel="noopener">legislative.gov.in</a></li>
+          <li><strong>e-Gazette of India</strong>: official notifications. <a href="https://egazette.gov.in/" rel="noopener">egazette.gov.in</a></li>
+          <li><strong>Supreme Court of India</strong>: Supreme Court judgments. <a href="https://www.sci.gov.in/" rel="noopener">www.sci.gov.in</a></li>
+          <li><strong>eCourts Services</strong>: court and case information. <a href="https://services.ecourts.gov.in/" rel="noopener">services.ecourts.gov.in</a> · <a href="https://ecourts.gov.in/" rel="noopener">ecourts.gov.in</a></li>
+          <li><strong>High Court of Andhra Pradesh</strong>: judgments and case information. <a href="https://aphc.gov.in/" rel="noopener">aphc.gov.in</a></li>
+          <li><strong>High Court for the State of Telangana</strong>: judgments and case information. <a href="https://tshc.gov.in/" rel="noopener">tshc.gov.in</a></li>
+          <li><strong>National Legal Services Authority (NALSA)</strong>: free legal aid. <a href="https://nalsa.gov.in/" rel="noopener">nalsa.gov.in</a></li>
+        </ul>
       </div>
     </section>
   </main>
