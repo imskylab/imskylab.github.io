@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+  Copyright (c) 2026 Jayvardhan Potabatti. All rights reserved.
+  The public landing page for Travel Mitra, published at https://imskylab.github.io/travel-mitra/
+  from the public repository imskylab/imskylab.github.io. It never links into the private app repository.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Mitra — Your road-trip companion, private by design</title>
+  <meta name="description" content="Travel Mitra records your road trips offline, suggests stops, tracks expenses and fuel, splits costs with family and exports a trip summary. No account, no server, no ads or analytics." />
+  <meta name="author" content="Jayvardhan Potabatti" />
+  <link rel="canonical" href="https://imskylab.github.io/travel-mitra/" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta property="og:image" content="https://imskylab.github.io/travel-mitra/icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Travel Mitra — Your road-trip companion, private by design" />
+  <meta property="og:description" content="Record trips offline, track expenses and fuel, split costs and export a summary. No account; your trips stay on your phone." />
+  <meta property="og:url" content="https://imskylab.github.io/travel-mitra/" />
+  <meta property="og:site_name" content="Travel Mitra" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Travel Mitra",
+    "operatingSystem": "Android",
+    "applicationCategory": "TravelApplication",
+    "description": "A road-trip recorder and planner that works offline: trips, stops, expenses, fuel, family cost split and trip summaries, with the user's data kept on the phone.",
+    "url": "https://imskylab.github.io/travel-mitra/",
+    "author": { "@type": "Person", "name": "Jayvardhan Potabatti" }
+  }
+  </script>
+  <style>
+    :root {
+      --navy: #12305A; --navy-deep: #0A1C36; --sun: #F39A2B; --sun-light: #FFD58A; --green: #2E8B3A;
+      --ink: #14202b; --paper: #F7F9FB; --card: #ffffff; --line: #dbe3ea; --muted: #4f5d6b; --link: #0B5394;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink: #e6edf3; --paper: #0e161d; --card: #16212b; --line: #26333f; --muted: #a9b6c3; --link: #8ab4f8; --green: #6CC47A; }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Helvetica, Arial, sans-serif;
+      color: var(--ink); background: var(--paper); line-height: 1.6; }
+    a { color: var(--link); }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+    header.hero { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%); color: #f3f6f9;
+      text-align: center; padding: 56px 16px 60px; border-bottom: 4px solid var(--sun); }
+    .hero .logo { display: block; width: 120px; height: 120px; margin: 0 auto 12px; }
+    .hero h1 { font-size: clamp(2rem, 6vw, 2.6rem); margin-bottom: 6px; }
+    .hero .sub { font-size: 1.15rem; color: var(--sun-light); font-weight: 500; }
+    .hero p.lede { max-width: 640px; margin: 18px auto 0; color: #dfe7ee; font-size: 1.05rem; }
+    .badges { margin-top: 22px; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+    .badges span { font-size: .85rem; background: rgba(255,255,255,.1); color: var(--sun-light);
+      padding: 5px 12px; border-radius: 999px; border: 1px solid rgba(255,213,138,.4); }
+    .store { margin-top: 26px; display: inline-block; padding: 12px 24px; border-radius: 999px;
+      background: var(--sun); color: var(--navy-deep); font-weight: 700; }
+    section { padding: 48px 0; }
+    section h2 { font-size: 1.6rem; text-align: center; margin-bottom: 8px; }
+    section .tag { text-align: center; color: var(--muted); margin: 0 auto 28px; max-width: 660px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+    .feature { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+    .feature h3 { font-size: 1.05rem; margin-bottom: 6px; }
+    .feature p { font-size: .95rem; color: var(--muted); }
+    .notes { max-width: 720px; margin: 0 auto; }
+    .note { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--green);
+      border-radius: 10px; padding: 16px 18px; margin-bottom: 14px; }
+    .note h3 { font-size: 1rem; margin-bottom: 4px; }
+    .note p { color: var(--muted); font-size: .95rem; }
+    .note.caution { border-left-color: var(--sun); }
+    footer { border-top: 1px solid var(--line); padding: 28px 0 40px; text-align: center; color: var(--muted); font-size: .92rem; }
+    footer p { margin: 4px 0; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img class="logo" src="logo.png" alt="" width="120" height="120" />
+    <h1>Travel Mitra</h1>
+    <p class="sub">Your road-trip companion, private by design</p>
+    <p class="lede">Record your road trips, keep track of stops, fuel and expenses, split costs with your
+      family and keep a summary of every journey. It works offline, needs no account, and your trips stay
+      on your phone.</p>
+    <div class="badges"><span>Works offline</span><span>No account</span><span>No ads or analytics</span><span>Android</span></div>
+    <p><span class="store">Coming soon to Google Play</span></p>
+  </header>
+  <main>
+    <section>
+      <div class="wrap">
+        <h2>What it does</h2>
+        <p class="tag">For road trips with family and friends, from a weekend drive to a long journey.</p>
+        <div class="grid">
+          <div class="feature"><h3>Record trips offline</h3><p>Distance and time from your phone's GPS, with no internet needed. The app tells you when GPS quality was poor, so you know how far to trust a number.</p></div>
+          <div class="feature"><h3>Stops, suggested for you</h3><p>Stops are suggested automatically from where you paused. You can rename, merge, split or remove them.</p></div>
+          <div class="feature"><h3>Expenses, fuel and tolls</h3><p>Note what you spend, with fuel and toll entries and a fuel estimate for the trip. Attach a receipt photo if you like.</p></div>
+          <div class="feature"><h3>Family cost split</h3><p>Add who is travelling and who paid. The app works out each share and who should pay whom to settle up.</p></div>
+          <div class="feature"><h3>Plan the trip</h3><p>Plan your stops before you leave, and hand off to Google Maps for turn-by-turn directions.</p></div>
+          <div class="feature"><h3>Summary and exports</h3><p>A trip summary you can share as a PDF or CSV, and a backup archive you can restore later.</p></div>
+          <div class="feature"><h3>Optional extras</h3><p>Look up nearby fuel, food and rest stops when you ask, and turn on break reminders for long drives.</p></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="wrap notes">
+        <h2>Private by design</h2>
+        <p class="tag">There is no Travel Mitra server and no account.</p>
+        <div class="note"><h3>Your trips stay on your phone</h3><p>Routes, stops, expenses and notes are kept in the app's private storage on your phone. No ads, no analytics, no tracking.</p></div>
+        <div class="note"><h3>Online lookups only when you ask</h3><p>Route estimates and nearby places are optional. They send only what that lookup needs, directly to Google, and never your recorded GPS history.</p></div>
+        <div class="note"><h3>Read the privacy policy</h3><p><a href="privacy/">Travel Mitra privacy policy</a></p></div>
+      </div>
+    </section>
+    <section>
+      <div class="wrap notes">
+        <h2>Please note</h2>
+        <div class="note caution"><h3>Numbers are estimates</h3><p>Distances, route times, tolls and fuel figures are estimates. GPS accuracy depends on your phone and surroundings.</p></div>
+        <div class="note caution"><h3>Don't use your phone while driving</h3><p>Set up your trip before you go, and let a passenger use the app on the way.</p></div>
+        <div class="note caution"><h3>Background recording depends on your phone</h3><p>Recording with the screen off relies on Android and your phone's battery settings. Some phones stop background apps; the app shows when recording was interrupted.</p></div>
+        <div class="note caution"><h3>Not affiliated with any company or government body</h3><p>Travel Mitra is an independent app. It is not affiliated with, endorsed by or representing Google, NHAI, FASTag or any government body.</p></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <p><a href="privacy/">Privacy policy</a></p>
+      <p>Contact: <a href="mailto:skylabs.in@gmail.com">skylabs.in@gmail.com</a></p>
+      <p>© 2026 Jayvardhan Potabatti. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
